@@ -1,0 +1,2 @@
+# Jimsgene
+Batalgaa ba turshilt
