@@ -1,23 +1,28 @@
 import React from "react";
 import { View, Image, SafeAreaView, Text } from "react-native";
 import MText from "./MText";
+import images from "../images/Helper.js";
 const MidCard = (props) => {
   return (
     <View
       style={{
         flexDirection: props.direction,
-        borderWidth: 4,
+        // borderWidth: 4,
         borderRadius: 20,
+        backgroundColor: "#ffffff",
+        width: props.width/2.5
+        
+        // justifyContent: 'space-between'
       }}
     >
-      <View>
+      <View style={{justifyContent: 'center', alignItems:'center'}}>
         <Image
-          source={require("../assets/orange.png")}
+          source={props.src}
           style={{
             width: props.width / 2.7,
             height: props.height / 10,
             resizeMode: "contain",
-            backgroundColor: "#ff0",
+            // backgroundColor: "#ff0",
           }}
         />
       </View>
@@ -26,11 +31,13 @@ const MidCard = (props) => {
         <View
           style={{
             paddingBottom: 15,
-            backgroundColor: "#ff120d",
+            // backgroundColor: "#ff120d",
             paddingLeft: 10,
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 18 }}>{props.text}</Text>
+          <Text style={{ fontSize: 18, fontWeight: "bold" }}>{props.text}</Text>
         </View>
         <View
           style={{
@@ -42,9 +49,10 @@ const MidCard = (props) => {
           <Image
             source={require("../assets/fire.png")}
             style={{
+              marginLeft: 12,
               width: props.width / 20,
               height: props.height / 35,
-              backgroundColor: "#788989",
+              // backgroundColor: "#788989",
             }}
           />
 
