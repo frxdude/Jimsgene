@@ -26,13 +26,15 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import   Main  from './screens/Main.js'
+import Detail from './screens/Detail'
 
 const App = () => {
   const [count, setCount] = useState(0);
   const onPress = () => setCount((prevCount) => prevCount + 1);
   return (
     <>
-      <Main/>
+      {/* <Main/> */}
+      <Detail />
       {/* <SafeAreaView style={{flexDirection: 'row'}}>
         <Text>{count}</Text>
         <TouchableOpacity
