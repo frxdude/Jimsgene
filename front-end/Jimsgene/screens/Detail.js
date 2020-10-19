@@ -15,8 +15,9 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import LinearGradient from 'react-native-linear-gradient';
 
 const width = Math.round(Dimensions.get("window").width);
+const height = Math.round(Dimensions.get("window").height);
 
-const Detail = () => {
+const Detail = ({navigation}) => {
     const [counter, setCounter] = useState(0);
     const quantityInc = () => {
         setCounter(counter + 1);
@@ -30,7 +31,7 @@ const Detail = () => {
                         <View style={styles.cont}>
                             <View style={styles.topBtn}>
                                 <View style={styles.topLView}>
-                                    <TouchableOpacity>
+                                    <TouchableOpacity onPress={() => navigation.navigate("Main")}>
                                         <MaterialIcons 
                                             name="arrow-back-ios"
                                             size={25}
@@ -50,9 +51,12 @@ const Detail = () => {
                                     </TouchableOpacity>
                                 </View>
                             </View>
+                            <View style={styles.image}>
                             <ImageBackground source={require('../assets/orange.png')} style={styles.image}>
-                                <Text style={styles.text}>Orange</Text>
+                                <Text style={styles.fruitName}>Orange</Text>
+                                <Text style={styles.fruitPrice}>$4.6/kg</Text>
                             </ImageBackground>
+                            </View>
                         <View>
                     </View>
 
@@ -146,23 +150,28 @@ const styles = StyleSheet.create({
         borderRadius: 40,
         elevation: 15
     },
-    image: {
-        width: 300,
-        height: 300,
-        justifyContent: "center"
-    },
-    text: {
-        color: "grey",
-        fontSize: 30,
+    fruitName: {
+        color: "black",
+        fontSize: 32,
         fontWeight: "bold",
         position: 'absolute',
-        bottom: 0,
+        bottom: 30,
+        alignSelf: 'center'
+    },
+    fruitPrice: {
+        color: "black",
+        fontSize: 15,
+        fontWeight: "bold",
+        position: 'absolute',
+        bottom: 10,
         alignSelf: 'center'
     },
     image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
+        flex: 2,
+        alignSelf:'center',
+        width: width - 100,
+        height: height - 460,
+        // backgroundColor: 'grey'
     },
     top: {
         height: '55%',

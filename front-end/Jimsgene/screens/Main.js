@@ -8,20 +8,22 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
-  ViewPropTypes,
+  ScrollView,
 } from "react-native";
 import MidCard from "../components/MidCard.js";
 import MiniCard from "../components/MiniCard.js";
 import MText from "../components/MText.js";
 import images from "../images/Helper.js";
 
-const width = Math.round(Dimensions.get("window").width);
-const height = Math.round(Dimensions.get("window").height);
-const Main = () => {
+
+const Main = ({navigation}) => {
+  const width = Math.round(Dimensions.get("window").width);
+  const height = Math.round(Dimensions.get("window").height);
   const [searchText, onChangeText] = useState("Search here..");
   const list = ["Orange", "Banana", "Cherry", "Apple"];
 
   return (
+    <ScrollView style={{flex : 1}}>
     <View style={styles.container}>
       <View style={{ flexDirection: "column", paddingHorizontal: 30 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -92,22 +94,32 @@ const Main = () => {
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: "row", justifyContent: "space-between"}}>
-          <MidCard
-            width={width}
-            height={height}
-            src={images.orange}
-            text="Fresh Orange"
-            calories="33 calories"
-            price="$4.60"
-          />
-          <MidCard
-            width={width}
-            height={height}
-            src={images.strawberry}
-            text="Strawberry"
-            calories="233 calories"
-            price="$8.60"
-          />
+          <ScrollView horizontal={true}>
+            <MidCard
+              width={width}
+              height={height}
+              src={images.orange}
+              text="Fresh Orange"
+              calories="33 calories"
+              price="$4.60"
+            />
+            <MidCard
+              width={width}
+              height={height}
+              src={images.strawberry}
+              text="Strawberry"
+              calories="233 calories"
+              price="$8.60"
+            />
+            <MidCard
+              width={width}
+              height={height}
+              src={images.tomato}
+              text="Tomato"
+              calories="67 calories"
+              price="$5.60"
+            />
+            </ScrollView>
         </View>
           <View style={{ paddingVertical: 30 }}>
             <MText text="Top of the week" size={25} />
@@ -123,6 +135,7 @@ const Main = () => {
           />
       </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -131,8 +144,8 @@ const styles = StyleSheet.create({
     paddingTop: 55,
     // paddingHorizontal: 20,
     backgroundColor: "#f7f6fd",
-    width: width,
-    height: height,
+    flex:1,
+    paddingBottom: 20
   },
   textInput: {
     height: 40,

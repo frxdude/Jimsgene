@@ -10,7 +10,8 @@ const MidCard = (props) => {
         // borderWidth: 4,
         borderRadius: 20,
         backgroundColor: "#ffffff",
-        width: props.width/2.5
+        width: props.width/2.5,
+        marginRight: 10
         
         // justifyContent: 'space-between'
       }}
