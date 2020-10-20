@@ -28,6 +28,7 @@ const Main = () => {
 
   // const onPress = () => this._panel.show()
   return (
+    <ScrollView style={{flex : 1}}>
     <View style={styles.container}>
       <View style={{ flexDirection: "column", paddingHorizontal: 30 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -111,23 +112,33 @@ const Main = () => {
             <MText text="See All" />
           </TouchableOpacity>
         </View>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <MidCard
-            width={width}
-            height={height}
-            src={images.orange}
-            text="Fresh Orange"
-            calories="33 calories"
-            price="$4.60"
-          />
-          <MidCard
-            width={width}
-            height={height}
-            src={images.strawberry}
-            text="Strawberry"
-            calories="233 calories"
-            price="$8.60"
-          />
+        <View style={{ flexDirection: "row", justifyContent: "space-between"}}>
+          <ScrollView horizontal={true}>
+            <MidCard
+              width={width}
+              height={height}
+              src={images.orange}
+              text="Fresh Orange"
+              calories="33 calories"
+              price="$4.60"
+            />
+            <MidCard
+              width={width}
+              height={height}
+              src={images.strawberry}
+              text="Strawberry"
+              calories="233 calories"
+              price="$8.60"
+            />
+            <MidCard
+              width={width}
+              height={height}
+              src={images.tomato}
+              text="Tomato"
+              calories="67 calories"
+              price="$5.60"
+            />
+            </ScrollView>
         </View>
         <View style={{ paddingVertical: 30 }}>
           <MText text="Top of the week" size={25} />
@@ -163,6 +174,7 @@ const Main = () => {
           </View>
         </SlidingUpPanel>
     </View>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
@@ -170,8 +182,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     // paddingHorizontal: 20,
     backgroundColor: "#f7f6fd",
-    width: width,
-    height: height,
+    flex:1,
+    paddingBottom: 20
   },
   textInput: {
     height: 40,
