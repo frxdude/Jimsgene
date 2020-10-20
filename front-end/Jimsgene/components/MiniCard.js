@@ -12,6 +12,7 @@ const MiniCard = (props) => {
 
   const toggleF = () => {
     setToggle(!toggle);
+    props.onPress();
   }
   return (
     <TouchableOpacity onPress={() => toggleF()}>

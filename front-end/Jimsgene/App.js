@@ -32,7 +32,8 @@ const App = () => {
   const onPress = () => setCount((prevCount) => prevCount + 1);
   return (
     <>
-      <Main/>
+    <Main/>
+      {/* <Main/> */}
       {/* <SafeAreaView style={{flexDirection: 'row'}}>
         <Text>{count}</Text>
         <TouchableOpacity
