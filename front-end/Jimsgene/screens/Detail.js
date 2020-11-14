@@ -30,7 +30,7 @@ const Detail = ({navigation}) => {
             <View style={styles.top}>
                         <View style={styles.cont}>
                             <View style={styles.topBtn}>
-                                <View style={styles.topLView}>
+                                {/* <View style={styles.topLView}>
                                     <TouchableOpacity onPress={() => navigation.navigate("Main")}>
                                         <MaterialIcons 
                                             name="arrow-back-ios"
@@ -39,8 +39,8 @@ const Detail = ({navigation}) => {
                                             style={styles.topLeft}
                                         /> 
                                     </TouchableOpacity>
-                                </View>
-                                <View style={styles.topRView}>
+                                </View> */}
+                                {/* <View style={styles.topRView}>
                                     <TouchableOpacity>
                                         <FontAwesome5 
                                             name="shopping-bag"
@@ -49,7 +49,7 @@ const Detail = ({navigation}) => {
                                             style={styles.topRight}
                                         />
                                     </TouchableOpacity>
-                                </View>
+                                </View> */}
                             </View>
                             <View style={styles.image}>
                             <ImageBackground source={require('../assets/orange.png')} style={styles.image}>

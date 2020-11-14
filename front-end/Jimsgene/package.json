@@ -15,9 +15,6 @@
     "@react-navigation/stack": "^5.9.3",
     "react": "16.13.1",
     "react-native": "0.63.3",
-<<<<<<< HEAD
-    "rn-sliding-up-panel": "^2.4.3"
-=======
     "react-native-gesture-handler": "^1.8.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-reanimated": "^1.13.1",
@@ -25,8 +22,8 @@
     "react-native-screens": "^2.11.0",
     "react-native-vector-icons": "^7.1.0",
     "react-navigation": "^4.4.2",
-    "react-navigation-stack": "^2.8.4"
->>>>>>> a0a19b94409424b638677b73e387f45fc19b0566
+    "react-navigation-stack": "^2.8.4",
+    "rn-sliding-up-panel": "^2.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

@@ -28,7 +28,7 @@ const Main = () => {
 
   // const onPress = () => this._panel.show()
   return (
-    <ScrollView style={{flex : 1}}>
+    // <ScrollView>
     <View style={styles.container}>
       <View style={{ flexDirection: "column", paddingHorizontal: 30 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -174,7 +174,7 @@ const Main = () => {
           </View>
         </SlidingUpPanel>
     </View>
-    </ScrollView>
+    // </ScrollView>
   );
 };
 const styles = StyleSheet.create({
